@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 class ComputeGradePointAverage {
 	public static void main(String[] args) {
-		// Create a new Scanner object reference
+		// Creates a Scanner object and assigns its reference to the variable
+		// named input, and it reads input from System.in
 		Scanner input = new Scanner(System.in);
 		
 		// Prompt the user to enter grade test grade

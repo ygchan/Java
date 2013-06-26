@@ -1,3 +1,7 @@
+// Implemented the GUI for the compute change software
+// Suprisingly not many code has to be rewritten, only a few line
+// However the \t seems to only add a few spaces?
+
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 

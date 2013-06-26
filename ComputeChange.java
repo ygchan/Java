@@ -1,14 +1,12 @@
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class ComputeChange {
 	public static void main(String[] args) {
-		// Create a Scanner
-		Scanner input = new Scanner(System.in);
-		
-		// Receive the amount
-		System.out.print(
-				"Enter an amount in double, for example 11.56: " );
-		double amount = input.nextDouble();
+		// Prompt user for the amount
+		String amountString = JOptionPane.showInputDialog(
+				"Enter an amount in double, for example 11.56: ");
+		double amount = Double.parseDouble(amountString);
 		
 		int remainingAmount = (int)(amount * 100);
 		
@@ -31,13 +29,16 @@ public class ComputeChange {
 		// Find the number of pennies in the remaining amount
 		int numberOfPennies = remainingAmount;
 		
-		// Display results
-		System.out.println("Your amount " + amount + " consist of \n" 
+		// Create the output string
+		String output = "Your amount " + amount + " consist of \n" 
 				+ "\t" + numberOfOneDollars + " dollars\n" 
 				+ "\t" + numberOfQuarters + " quaters\n" 
 				+ "\t" + numberOfDimes + " dimes\n" 
 				+ "\t" + numberOfNickels + " nickels\n" 
-				+ "\t" + numberOfPennies + " pennies\n");	
+				+ "\t" + numberOfPennies + " pennies\n";
+		
+		// Display results using the Dialog Box
+		JOptionPane.showMessageDialog(null, output);
 	}
 		
 }

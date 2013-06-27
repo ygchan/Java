@@ -1,4 +1,6 @@
 // A simple program to display the account value after sixth months
+// There is a lot of copy and paste going on here. I think if I can use a
+// function or a loop, this can be simpler.
 
 class ComputeCompoundValue {
 	public static void main(String[] args) {

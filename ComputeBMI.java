@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-class ComputingBMI {
+class ComputeBMI {
 	public static void main(String[] args) {
 		// Prompt user to input the weight
 		System.out.print("Enter weight in pounds: ");

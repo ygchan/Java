@@ -18,6 +18,9 @@ class ComputeWindChill {
 				- 35.75 * (Math.pow(windSpeedPreHour, 0.16))
 				+ 0.4275 * (temperature) * Math.pow(windSpeedPreHour, 0.16);
 		
+		// Format it to only 5 decimal place
+		windChillIndex = (int)(windChillIndex * 100000) / 100000.0;
+		
 		System.out.print("The wind chill index is: " + windChillIndex);
 	}
 }

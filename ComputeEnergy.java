@@ -21,8 +21,8 @@ class ComputeEnergy {
 		
 		// Compute the energy (Joules)
 		// Formula: Q = M * (FT - IT) * 4184
-		double energy = amountOfWater * 
-				(finalTemperature - initialTemperature) * 4184;
+		float energy = (float) (amountOfWater * 
+				(finalTemperature - initialTemperature) * 4184);
 		
 		System.out.print("The energy needed is: " + energy);
 	}

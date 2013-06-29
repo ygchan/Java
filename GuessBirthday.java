@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class GuessBirthday {
 	public static void main(String[] args) {
@@ -24,60 +24,34 @@ public class GuessBirthday {
 		
 		int day = 0;
 		
-		// Create a Scanner
-		Scanner input = new Scanner(System.in);
-		
-		// Prompt the user to answer question
-		System.out.print("Is your birthday in Set1\n");
-		System.out.print(set1);
-		System.out.print("\nEnter 0 for No and 1 for Yes: ");
-		int answer = input.nextInt();
-		
-		// Is the answer in set1?
-		if (answer == 1)
+		// Prompt the user to answer questions
+		// Here we use the confirmation dialog box 
+		int answer = JOptionPane.showConfirmDialog(null, 
+				"Is your birthday in these numbers?\n" + set1);
+		if (answer == JOptionPane.YES_OPTION)
 			day += 1;
-		
-		// Prompt the user to answer question
-		System.out.print("Is your birthday in Set2\n");
-		System.out.print(set2);
-		System.out.print("\nEnter 0 for No and 1 for Yes: ");
-		answer = input.nextInt();
-
-		// Is the answer in set2?
-		if (answer == 1)
+			
+		answer = JOptionPane.showConfirmDialog(null, 
+				"Is your birthtday in these numbers?\n" + set2);
+		if (answer == JOptionPane.YES_OPTION)
 			day += 2;
 		
-		// Prompt the user to answer question
-		System.out.print("Is your birthday in Set3\n");
-		System.out.print(set3);
-		System.out.print("\nEnter 0 for No and 1 for Yes: ");
-		answer = input.nextInt();
-
-		// Is the answer in set3?
-		if (answer == 1)
+		answer = JOptionPane.showConfirmDialog(null, 
+				"Is your birthtday in these numbers?\n" + set3);
+		if (answer == JOptionPane.YES_OPTION)
 			day += 4;
-	
-		// Prompt the user to answer question
-		System.out.print("Is your birthday in Set4\n");
-		System.out.print(set4);
-		System.out.print("\nEnter 0 for No and 1 for Yes: ");
-		answer = input.nextInt();
-
-		// Is the answer in set4?
-		if (answer == 1)
+		
+		answer = JOptionPane.showConfirmDialog(null, 
+				"Is your birthtday in these numbers?\n" + set4);
+		if (answer == JOptionPane.YES_OPTION)
 			day += 8;
 		
-		// Prompt the user to answer question
-		System.out.print("Is your birthday in Set5\n");
-		System.out.print(set5);
-		System.out.print("\nEnter 0 for No and 1 for Yes: ");
-		answer = input.nextInt();
-
-		// Is the answer in set5?
-		if (answer == 1)
+		answer = JOptionPane.showConfirmDialog(null, 
+				"Is your birthtday in these numbers?\n"+ set5);
+		if (answer == JOptionPane.YES_OPTION)
 			day += 16;
 		
-		System.out.println("\nYour birthday is " + day + "!");
-		
+		JOptionPane.showMessageDialog(null, "Your birthday is " +
+				day + "!");
 	}
 }

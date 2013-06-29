@@ -6,6 +6,13 @@ class CurrentTime {
 	public static void main(String[] args) {
 		// Create a Scanner object
 		Scanner input = new Scanner(System.in);
+		
+		// Adjust the offset to the current hour, note that we have to include
+		// the offset before we calculate current hours. 
+		// Prompt user to ask what is the time zone offset
+		System.out.print("Enter the time zone offset to GMT: ");
+		long offset = input.nextLong();
+		
 		long totalMillSeconds = System.currentTimeMillis();
 		
 		long totalSeconds = totalMillSeconds / 1000;
@@ -15,16 +22,9 @@ class CurrentTime {
 		long currentMinute = totalMinutes % 60;
 		
 		long totalHours = totalMinutes / 60;
-		long currentHour = totalHours % 24;
+		long currentHour = (totalHours + offset) % 24;
 		
-		// Prompt user to ask what is the time zone offset
-		System.out.print("Enter the time zone offset to GMT: ");
-		long offset = input.nextLong();
-		
-		// Adjust the offset to the current hour
-		currentHour = currentHour + offset;
 		System.out.print("The current time: " + currentHour + ":" 
-				+ currentMinute + ":" + currentSecond);
-		
+				+ currentMinute + ":" + currentSecond);				
 	}
 }

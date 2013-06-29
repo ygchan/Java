@@ -43,6 +43,8 @@ public class ComputeTax {
 					(82250 - 33950) * 0.25 + (171550 - 82250) * 0.28 +
 					(372950 - 171550) * 0.33 + (income - 372950) * 0.35;
 		}
+		if (status == 1) {
+		if (status == 2) {
 		else {
 			System.out.println("Error: invalid status");
 			System.exit(0);

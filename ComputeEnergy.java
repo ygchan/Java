@@ -1,5 +1,10 @@
 // A program that calculate the energy needed to heat water from
+// Sample output (To save time flipping through the book
 // initial temperature to a final temperature
+// Enter the amount of water in kilograms: 55.5
+// Enter the initial temperature: 3.5
+// Enter the final temperature: 10.5
+// The engery needed is: 1.625484e+06
 
 import java.util.Scanner;
 
@@ -24,6 +29,8 @@ class ComputeEnergy {
 		float energy = (float) (amountOfWater * 
 				(finalTemperature - initialTemperature) * 4184);
 		
-		System.out.print("The energy needed is: " + energy);
+		// System.out.print("The energy needed is: " + energy);
+		// Learned this new trick on chapter 3.18
+		System.out.printf("The engery needed is: %1.6e", energy);
 	}
 }

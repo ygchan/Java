@@ -6,8 +6,9 @@ class RandomCharacter{
 		// A sudo random value that is based on the current time
 		long randomSeed = System.currentTimeMillis();
 		
-		randomSeed = randomSeed / 1000 % 26 + 65;
-		char ch = (char)randomSeed;
+		// We have to put the () in the expression
+		int randomNumber = (int)(randomSeed % 26) + 65;
+		char ch = (char)randomNumber;
 		
 		System.out.println(ch);
 	}

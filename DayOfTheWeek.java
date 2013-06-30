@@ -29,13 +29,12 @@ public class DayOfTheWeek {
 		
 		// Compute the answer
 		int k = year % 7; // The year of the century
-		int j = (int)(year / 100.0); // the century
+		int j = (int)(year / 100); // the century
 		int q = day;
 		int m = month;
-		int h = (q + (int)((26 * (m + 1)) / 10.0) + k + (int)(k / 4.0) 
-				+ (int)(j / 4.0) + (5 * j)) % 7;
+		int h = (q + (int)(26 * (m + 1) / 10) + k + (int)(k / 4) 
+				+ (int)(j / 4) + (5 * j)) % 7;
 		
-		System.out.println("Test: " + year + ", " + month + ", " + day);
 		System.out.print(h);
 		
 		String result = "Day of the week is ";

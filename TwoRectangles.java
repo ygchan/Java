@@ -37,8 +37,8 @@ public class TwoRectangles {
 		
 		// Determine if it is inside
 		boolean isInside = 
-			((r1x1 >= r2x1) && (r1x2 >= r2x2) && 
-			(r1y1 >= r2y1) && (r1y2 >= r2y2));
+			((r1x1 <= r2x1) && (r1x2 >= r2x2) && 
+			(r1y1 >= r2y1) && (r1y2 <= r2y2));
 		
 		System.out.println("Is rectangle 2 insdie of rectangle 1?" + isInside);
 		

@@ -27,6 +27,10 @@ public class TwoRectangles {
 		double r2y1 = r2cy + (r2height / 2.0);
 		double r2y2 = r2cy - (r2height / 2.0);
 		
+		// Testing the rectangle coordinates
+		System.out.printf(
+				"(%2.2f, %2.2f), (%2.2f, %2.2f)",r1x1, r1y1, r1x2, r1y2);
+		
 		// Determine if it is inside
 		
 		// Determine if it is overlap

@@ -33,14 +33,22 @@ public class TwoRectangles {
 		double r2x2 = r2cx + (r2width / 2.0);
 		double r2y1 = r2cy + (r2height / 2.0);
 		double r2y2 = r2cy - (r2height / 2.0);
+		
+		// Testing the rectangle coordinates
+		System.out.printf(
+			"Rectangle 1: (%2.2f, %2.2f), (%2.2f, %2.2f)",
+			r1x1, r1y1, r1x2, r1y2);
+		System.out.printf(
+			"\nRectangle 2: (%2.2f, %2.2f), (%2.2f, %2.2f)\n",
+			r2x1, r2y1, r2x2, r2y2)
 
 		// Determine if it is inside
 		boolean isInside = ((r1x1 <= r2x1) && 
-				(r1x2 >= r2x2) && (r1y1 >= r2y1) && (r1y2 <= r2y2));
+			(r1x2 >= r2x2) && (r1y1 >= r2y1) && (r1y2 <= r2y2));
 
 		// Determine if it is overlap
 		boolean isOverLap = ((r1x1 <= r2x1) || 
-				(r1x2 >= r2x2) || (r1y1 >= r2y1) || (r1y2 <= r2y2));
+			(r1x2 >= r2x2) || (r1y1 >= r2y1) || (r1y2 <= r2y2));
 
 		// Display result
 		if (isInside) 

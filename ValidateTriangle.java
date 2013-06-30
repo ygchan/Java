@@ -18,16 +18,19 @@ public class ValidateTriangle {
 		double sum2 = edge2 + edge3;
 		double sum3 = edge3 + edge1;
 		
+		// Testing if any of the two edges be greater than the third one
 		boolean test1 = (sum1 > edge3);
 		boolean test2 = (sum2 > edge1);
 		boolean test3 = (sum3 > edge2);
 		
-		if (test1 && test2 && test3)
+		boolean isValid = (test1 && test2 && test3);
+		
+		if (isValid)
 			System.out.print("Can edge " + edge1 + " " + edge2 + " and " +
-				edge3 + " form a triangle? true");
+				edge3 + " form a triangle? " + isValid);
 		else
 			System.out.print("Can edge" + edge1 + " " + edge2 + " and " +
-					edge3 + " form a triangle? false");
+					edge3 + " form a triangle? " + isValid);
 		
 	}
 }

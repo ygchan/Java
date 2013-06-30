@@ -3,6 +3,7 @@
 
 public class TwoRectangles {
 	public static void main(String[] args) {
+		// Prompt user to enter the coordinates of two rectangles
 		
 	}
 }

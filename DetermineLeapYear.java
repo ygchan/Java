@@ -1,24 +1,30 @@
 // Program that determine if the year is leap year
+// Implement a swing GUI Message box as an update
+
+import javax.swing.JOptionPane;
 
 public class DetermineLeapYear {
 	public static void main(String[] args) {
-		// Get a random year between 0 - 2013
-		int randomYear = (int)(System.currentTimeMillis() % 2013);
-		
+		// Prompt user for a year input
+		String yearString = JOptionPane.showInputDialog("Enter a year: ");
+		int year = Integer.parseInt(yearString);
+
 		// A leap year is divisible by 4
-		boolean isLeapYear = (randomYear % 4 == 0);
+		boolean isLeapYear = (year % 4 == 0);
 		
 		// A leap year is divisible by 4 but not by 100
-		isLeapYear = isLeapYear &&  (randomYear % 100 != 0);
+		isLeapYear = isLeapYear &&  (year % 100 != 0);
 		
 		// A leap year is divisible by 4 but not by 100 or divisible by 400
-		isLeapYear = isLeapYear || (randomYear % 400 == 0);
+		isLeapYear = isLeapYear || (year % 400 == 0);
 		
-		System.out.print("The year " + randomYear);
+		String message = ("The year " + year);
 		
 		if (isLeapYear)
-			System.out.print(" is a leap year.");
+			message += " is a leap year.";
 		else
-			System.out.print(" is not a leap year.");
+			message += " is not a leap year.";
+		
+		JOptionPane.showMessageDialog(null, message);
 	}
 }

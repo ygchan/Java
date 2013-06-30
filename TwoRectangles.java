@@ -46,5 +46,11 @@ public class TwoRectangles {
 		boolean isNotOverLap = !(isOverLap);
 
 		// Display result
+		if (isInside) 
+			System.out.print("r2 is inside r1");
+		else if (isOverLap)
+			System.out.print("r2 overlap r1");
+		else if (isNotOverLap)
+			System.out.print("r2 does not overlap r1");
 	}
 }

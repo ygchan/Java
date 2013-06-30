@@ -7,6 +7,8 @@ public class GameRockPaperScissor {
 		// Prompt the user to input the option they choose
 		String humanInput = JOptionPane.showInputDialog(
 				"Enter rock, paper, or scissor:");
+		// Convert to lower case
+		humanInput = humanInput.toLowerCase();
 		
 		// Generate a random number
 		// Scissor (0),  rock (1), paper (2)

@@ -12,15 +12,18 @@ public class CheckNumber {
 		boolean divisibleBy5 = (number % 5 == 0);
 		boolean divisibleBy6 = (number % 6 == 0);
 		
-		String message = input + " is ";
+		// Compute the boolean value
+		boolean isBoth = (divisibleBy5 && divisibleBy6);
+		boolean isOneOfThem = (divisibleBy5 || divisibleBy6);
+		boolean isOneButNotBoth = (divisibleBy5 ^ divisibleBy6);
 		
-		if (divisibleBy5 && divisibleBy6) 
-			message += "divisible by both 5 and 6.";
-		else if (divisibleBy5 || divisibleBy6)
-			message += "divisible by 5 or 6, but not both. ";
-		else
-			message += "not divisible by either 5 or 6";
-		
+		// Generate output message
+		String message = 
+			"Is " + input + " divisible by both 5 and 6?   " + isBoth 
+			+ "\nIs " + input + " divisible by 5 or 6?   " + isOneOfThem
+			+ "\nIs " + input + " divisible by 5 or 6, but not both?   " 
+			+ isOneButNotBoth;
+
 		// Display result
 		JOptionPane.showMessageDialog(null, message);
 		

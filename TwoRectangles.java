@@ -45,16 +45,15 @@ public class TwoRectangles {
 		// Determine if it is inside
 		boolean isInside = ((r1x1 >= r2x1) && (r1x2 >= r2x2) 
 				&& (r1y1 >= r2y1) && (r1y2 <= r2y2));
-
-		// Determine if it is overlap
-		// The end point of r2x1 || r2x2 has to be between r1x1 and r2x2
-		boolean isXOverLap = ((r2x1 <= r1x2) && (r2x1 <= r1x1)) ||
-				(r2x2 <= r1x2) && (r2x2 <= r1x1);
-		// The end point of r2y1 has to be between r1y1 and r1y2
-		boolean isYOverLap = ((r2y1 <= r1y1) && (r2y1 >= r2y1) ||
-				(r2y2 <= r1y1) && (r2y2 <= r1y2));
 		
-		boolean isOverLap = (isXOverLap && isYOverLap);
+		// Determine if it is  overlap
+		boolean isOverLap = (!(r1x1 >= r2x2) && !(r1x2 <= r2x2)
+				&& !(r1y2 >= r2y1) && !(r1y1 <= r2y2));
+
+
+		// Determine if it is NOT overlap
+		boolean isNotOverLap = ((r1x1 >= r2x2) || (r1x2 <= r2x2)
+				|| (r1y2 >= r2y1) || (r1y1 <= r2y2));
 
 		// Display result
 		if (isInside) 

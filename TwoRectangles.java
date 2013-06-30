@@ -32,7 +32,7 @@ public class TwoRectangles {
 			"Rectangle 1: (%2.2f, %2.2f), (%2.2f, %2.2f)",
 			r1x1, r1y1, r1x2, r1y2);
 		System.out.printf(
-			"\nRectangle 2: (%2.2f, %2.2f), (%2.2f, %2.2f)",
+			"\nRectangle 2: (%2.2f, %2.2f), (%2.2f, %2.2f)\n",
 			r2x1, r2y1, r2x2, r2y2);
 		
 		// Determine if it is inside
@@ -40,9 +40,13 @@ public class TwoRectangles {
 			((r1x1 <= r2x1) && (r1x2 >= r2x2) && 
 			(r1y1 >= r2y1) && (r1y2 <= r2y2));
 		
-		System.out.println("Is rectangle 2 insdie of rectangle 1?" + isInside);
+		// System.out.println(
+		//	 "Is rectangle 2 inside of rectangle 1?" + isInside);
 		
 		// Determine if it is overlap
+		boolean isCoverLap = 
+				((r1x1 <= r2x1) || (r1x2 >= r2x2) || 
+				(r1y1 >= r2y1) || (r1y2 <= r2y2));
 		
 		// Determine if it is not overlap
 		

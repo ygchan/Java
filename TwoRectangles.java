@@ -14,7 +14,7 @@ public class TwoRectangles {
 		double r2cx = 1.5;
 		double r2cy = 5;
 		double r2width = 0.5;
-		double r2height = 43;
+		double r2height = 3;
 		
 		// Compute the 4 corners's coordinates for the rectangle
 		double r1x1 = r1cx - (r1width / 2.0);
@@ -39,6 +39,8 @@ public class TwoRectangles {
 		boolean isInside = 
 			((r1x1 >= r2x1) && (r1x2 >= r2x2) && 
 			(r1y1 >= r2y1) && (r1y2 >= r2y2));
+		
+		System.out.println("Is rectangle 2 insdie of rectangle 1?" + isInside);
 		
 		// Determine if it is overlap
 		

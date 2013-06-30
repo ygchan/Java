@@ -9,14 +9,14 @@ public class TwoRectangles {
 		Scanner input = new Scanner(System.in);
 		
 		// Prompt user to enter the coordinates of two rectangles
-		System.out.print(
+		System.out.println(
 				"Enter the r1's center x, y coordinates, width and height");
 		double r1cx = input.nextDouble(); // rectangle 1's center x coordinate
 		double r1cy = input.nextDouble(); // rectangle 1's center y coordinate
 		double r1width = input.nextDouble(); // rectangle 1's width
 		double r1height = input.nextDouble(); // rectangle 1's height
 
-		System.out.print(
+		System.out.println(
 				"Enter the r2's center x, y coordinates, width and height");
 		double r2cx = input.nextDouble();
 		double r2cy = input.nextDouble();
@@ -47,7 +47,7 @@ public class TwoRectangles {
 			System.out.print("r2 is inside r1");
 		else if (isOverLap)
 			System.out.print("r2 overlap r1");
-			else
-				System.out.print("r2 does not overlap r1");
+		else
+			System.out.print("r2 does not overlap r1");
 	}
 }

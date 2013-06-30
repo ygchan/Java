@@ -81,8 +81,8 @@ public class TwoRectangles {
 		
 		// Determine if it is not overlap
 		boolean isNotOverLap = !(isOverLap);
-		System.out.println(
-		  "Is rectangle 2 overlapping rectangle 1? " + isNotOverLap);
+		/* System.out.println(
+		  "Is rectangle 2 overlapping rectangle 1? " + isNotOverLap);*/
 		
 		// Display result
 	}

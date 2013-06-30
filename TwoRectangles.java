@@ -10,5 +10,7 @@ public class TwoRectangles {
 		// Determine if it is overlap
 		
 		// Determine if it is not overlap
+		
+		// Display result
 	}
 }

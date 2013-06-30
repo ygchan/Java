@@ -17,7 +17,10 @@ public class TwoRectangles {
 		double r2height = 43;
 		
 		// Compute the 4 corners's coordinates for the rectangle
-		
+		double r1x1 = r1cx - (r1width / 2.0);
+		double r1x2 = r1cx + (r1width / 2.0);
+		double r1y1 = r1cy + (r1height / 2.0);
+		double r1y2 = r1cy - (r1height / 2.0);
 		
 		// Determine if it is inside
 		

@@ -19,9 +19,9 @@ public class FindNumberOfDays {
 		
 		// Prompt user for the month
 		String monthString = JOptionPane.showInputDialog(
-				"Enter which month are you looking for: ");
+				"Enter which month you are looking for: ");
 		int month = Integer.parseInt(monthString);
-		
+
 		// Compute if it is BIG (31 days month)
 		boolean isBig = (month == 1 || month == 3 || month == 5 
 				|| month == 7 || month == 8 || month == 12);
@@ -36,12 +36,12 @@ public class FindNumberOfDays {
 		// SMALL Months, ie: 2, 4, 6, 9, 11
 		else {
 			// Special case on February
-			if (monthString == "2" && isLeap) 
+			if (month == 2 && isLeap) 
 							result += "29 days!";
-			else if (monthString == "2")
+			else if (month == 2)
 				result += "28 days!";
-			
-				// result += "30 days!";
+			else
+				result += "30 days!";
 		}
 		
 		// Display result

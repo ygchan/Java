@@ -24,13 +24,10 @@ public class ValidateTriangle {
 		boolean test3 = (sum3 > edge2);
 		
 		boolean isValid = (test1 && test2 && test3);
+		String message = "Can edge " + edge1 + " " + edge2 + " and " +
+				edge3 + " form a triangle? ";
 		
-		if (isValid)
-			System.out.print("Can edge " + edge1 + " " + edge2 + " and " +
-				edge3 + " form a triangle? " + isValid);
-		else
-			System.out.print("Can edge" + edge1 + " " + edge2 + " and " +
-					edge3 + " form a triangle? " + isValid);
+		System.out.print(message + isValid);
 		
 	}
 }

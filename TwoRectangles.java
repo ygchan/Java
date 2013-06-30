@@ -22,6 +22,11 @@ public class TwoRectangles {
 		double r1y1 = r1cy + (r1height / 2.0);
 		double r1y2 = r1cy - (r1height / 2.0);
 		
+		double r2x1 = r2cx - (r2width / 2.0);
+		double r2x2 = r2cx + (r2width / 2.0);
+		double r2y1 = r2cy + (r2height / 2.0);
+		double r2y2 = r2cy - (r2height / 2.0);
+		
 		// Determine if it is inside
 		
 		// Determine if it is overlap

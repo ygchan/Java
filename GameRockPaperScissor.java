@@ -6,7 +6,7 @@ public class GameRockPaperScissor {
 	public static void main(String[] args) {
 		// Prompt the user to input the option they choose
 		String humanInput = JOptionPane.showInputDialog(
-				"Enter rock(0), paper(1), or scissor(2):");
+				"Enter rock, paper, or scissor:");
 		
 		// Generate a random number
 		// Scissor (0),  rock (1), paper (2)

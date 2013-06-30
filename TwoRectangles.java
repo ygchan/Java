@@ -29,11 +29,14 @@ public class TwoRectangles {
 		
 		// Testing the rectangle coordinates
 		System.out.printf(
-				"(%2.2f, %2.2f), (%2.2f, %2.2f)",r1x1, r1y1, r1x2, r1y2);
+			"Rectangle 1: (%2.2f, %2.2f), (%2.2f, %2.2f)",
+			r1x1, r1y1, r1x2, r1y2);
 		System.out.printf(
-				"\n(%2.2f, %2.2f), (%2.2f, %2.2f)",r2x1, r2y1, r2x2, r2y2);
+			"\nRectangle 2: (%2.2f, %2.2f), (%2.2f, %2.2f)",
+			r2x1, r2y1, r2x2, r2y2);
 		
 		// Determine if it is inside
+		
 		
 		// Determine if it is overlap
 		

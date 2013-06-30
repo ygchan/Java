@@ -1,20 +1,27 @@
 // A program that prompts user to enter the two rectangle and
 // determine if they overlap each other.
 
-import javax.swing.util;
+import java.util.Scanner;
 
 public class TwoRectangles {
 	public static void main(String[] args) {
+		// Create a Scanner
+		Scanner input = new Scanner(System.in);
+		
 		// Prompt user to enter the coordinates of two rectangles
-		double r1cx = 2.5; // rectangle 1's center x coordinate
-		double r1cy = 4; // rectangle 1's center y coordinate
-		double r1width = 2.5; // rectangle 1's width
-		double r1height = 43; // rectangle 1's height
+		System.out.print(
+				"Enter the r1's center x, y coordinates, width and height");
+		double r1cx = input.nextDouble(); // rectangle 1's center x coordinate
+		double r1cy = input.nextDouble(); // rectangle 1's center y coordinate
+		double r1width = input.nextDouble(); // rectangle 1's width
+		double r1height = input.nextDouble(); // rectangle 1's height
 
-		double r2cx = 1.5;
-		double r2cy = 5;
-		double r2width = 0.5;
-		double r2height = 3;
+		System.out.print(
+				"Enter the r2's center x, y coordinates, width and height");
+		double r2cx = input.nextDouble();
+		double r2cy = input.nextDouble();
+		double r2width = input.nextDouble();
+		double r2height = input.nextDouble();
 
 		// Compute the 4 corners's coordinates for the rectangle
 		double r1x1 = r1cx - (r1width / 2.0);

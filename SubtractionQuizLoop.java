@@ -35,14 +35,12 @@ public class SubtractionQuizLoop {
 				System.out.println("Your answer is wrong.\n" + number1 + 
 					" - " + number2 + " should be " + (number1 - number2));
 				
-				// Increase the count
-				count++;
-				
 				output += "\n" + number1 + "-" + number2 + "=" + answer +
 					((number1 - number2 == answer) ? " correct" : " wrong" );
 			}
 			
-
+			// Increase the count
+			count++;
 		}
 		
 		long endTime = System.currentTimeMillis();

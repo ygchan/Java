@@ -15,16 +15,20 @@ public class GreatestCommonDivisor2 {
 		int number2 = input.nextInt();
 		
 		// Find the smaller between n1 and n2
-		int smaller = (number1 > number2) ? number2 : number1;
+		int d = (number1 > number2) ? number2 : number1;
 		System.out.println(
-				smaller + " is the smaller between " + number1 + ", " + number2);
-		
+				d + " is the smaller between " + number1 + ", " + number2);
+	
 		// Determine if d is the common divisor for both n1 and n2
-		
-		// If so, break
-		
-		// Otherwise, decrement d
+		boolean isDivisor = ((number1 % d == 0) && (number2 % d == 0));
+	
+		while (!isDivisor) {
+			d--;
+			isDivisor = ((number1 % d == 0) && (number2 % d == 0));
+		}
 		
 		// Print the result
+		System.out.println(
+				"The gcd of " + number1 + ", " + number2 + " is " + d);
 	}
 }

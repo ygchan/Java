@@ -2,10 +2,25 @@
 
 public class DisplayACSIITable{
 	public static void main(String[] args) {
-		// Test if integer 33 equal to '!' in ASCII
-		int number = 33;
+
+		// Print 10 character per line
+		final int CHARACTER_PER_LINE = 10;
+		int number= 33;
+		int count = 1; 
 		char character = (char)number;
 		
-		System.out.println(character);
+		while (character != '~') {
+			character = (char)number;
+			
+			// Print 10 characters per line
+			if (count % 10 == 0)
+				System.out.println(character + " ");
+			else
+				System.out.print(character + " ");
+			
+			// Increment the Integer representation of the char
+			number++;
+			count++;
+		}
 	}
 }

@@ -27,19 +27,25 @@ public class DisplayPyramid {
 	public static void main(String[] args) {
 		// Create a Scanner
 		Scanner input = new Scanner(System.in);
-		int numberOfLines = 15; // Hold the user input
+		int numberOfLines = 55; // Hold the user input
+		int numberOfSpaces = 0;
 		
 		// The base case if the numberOfLines is from 1 to 9
-		int numberOfSpaces = (numberOfLines - 9) * 2 + 1;
+		if (numberOfLines < 10)
+			numberOfSpaces = numberOfLines * 2;
 		
 		// Special case if the numberOfLines is 10 OR greater
-		if (numberOfLines >= 10)
+		if (numberOfLines == 10) {
 			numberOfSpaces += 3;
-		
+			numberOfSpaces += 9 * 2;
+		}
+			
 		// Continue to handle the case where it is greater than 10
-		if (numberOfLines > 10)
-			numberOfSpaces += (numberOfLines - 10) * 4;
-		
+		if (numberOfLines > 10) {
+			numberOfSpaces += 9 * 2;
+			numberOfSpaces += (numberOfLines - 9) * 3;
+		}
+			
 //		// While !(1 <= numberOfLines <= 15)
 //		do {
 //			// Prompt user for input

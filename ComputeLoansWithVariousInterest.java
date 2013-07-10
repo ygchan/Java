@@ -51,8 +51,8 @@ public class ComputeLoansWithVariousInterest {
 					(1 - 1/Math.pow(1 + monthlyInterestRate, numberOfYear * 12));
 			double totalPayment = monthlyPayment * numberOfYear * 12;
 			
-			System.out.print("\n" + interestRate + "% ");
-			System.out.print("Monthly payment: " + monthlyPayment + " ");
+			System.out.print("\n" + interestRate + "%\t ");
+			System.out.print("Monthly payment: " + monthlyPayment + "\t ");
 			System.out.print("Total payment: " + totalPayment);
 		}
 			// Compute the monthly payment and total payment

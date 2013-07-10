@@ -6,14 +6,20 @@ public class ComputeLoanWithAmortization {
 		Scanner input = new Scanner(System.in);
 		
 		// Prompt for years and annual interest rate
-		System.out.print("Loan Amount: ");
-		double loanAmount = input.nextDouble();
+//		System.out.print("Loan Amount: ");
+//		double loanAmount = input.nextDouble();
+//		
+//		System.out.print("Number of Years: ");
+//		int numberOfYear = input.nextInt();
+//		
+//		System.out.print("Annual Interest Rate: ");
+//		double annualInterestRate = input.nextDouble();
 		
-		System.out.print("Number of Years: ");
-		int numberOfYear = input.nextInt();
+		// Test unit with known output value
+		double loanAmount = 10000;
+		int numberOfYear = 1;
+		double annualInterestRate = 0.07;
 		
-		System.out.print("Annual Interest Rate: ");
-		double annualInterestRate = input.nextDouble();
 		
 		// Compute monthly interest rate
 		// Monthly interest rate: Annual Interest / 12 / 100
@@ -25,6 +31,11 @@ public class ComputeLoanWithAmortization {
 		//                  (1 - 1 / (1 + monthly interest rate) ^ years * 12
 		double monthlyPayment = (loanAmount * monthlyInterestRate) / 
 				(1 - 1 / Math.pow((1 + monthlyInterestRate), (numberOfYear * 12)));
+		
+		double totalPayment = monthlyPayment * 12 * numberOfYear;
+		
+		System.out.println("Monthly payment: " + monthlyPayment);
+		System.out.println("Total payment: " + totalPayment);
 		
 		// Compute total payment
 		// Total payment = monthly payment * 12 * years

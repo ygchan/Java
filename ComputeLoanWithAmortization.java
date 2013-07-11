@@ -21,20 +21,25 @@ public class ComputeLoanWithAmortization {
 		double totalPayment = monthlyPayment * numberOfYear * 12;
 
 		System.out.printf("Monthly Payment: %.2f\n", monthlyPayment);
-		System.out.printf("Annual Interest Rate: %.2f", totalPayment);
+		System.out.printf("Annual Interest Rate: %.2f\n\n", totalPayment);
 
 		double monthlyInterest = 0;
-		double principal = loanAmount;
-		double balance = 0;
+		double principal = 0;
+		double balance = loanAmount; // Initially the balance is the full amount
 
-		// String output = "Payment#\t Interest\t Principal\t Balance \n"; 
-		// System.out.print(output);
+		String output = "Payment#\t Interest\t Principal\t Balance \n"; 
+		System.out.print(output);
 
 		for (int month = 1; month <= (numberOfYear * 12); month++) {
 			// Calculate how much interest for current month
-			monthlyInterest = principal * monthlyInterestRate;
-			principal = principal;
-			// System.out.println(monthlyInterest);
+			monthlyInterest = balance * monthlyInterestRate;
+			principal = monthlyPayment - monthlyInterest;
+			balance -= principal;
+			
+			// Display the message
+			System.out.printf("%d\t\t %.2f\t\t %.2f\t\t %.2f\n", 
+					month, monthlyInterest, principal, balance);
+
 		}
 	}
 }

@@ -4,11 +4,16 @@ public class ComputeLoanWithAmortization {
 	public static void main(String[] args) {
 		// Create a Scanner
 		Scanner input = new Scanner(System.in);
-
-		// Test unit with known output value
-		double loanAmount = 10000.0;
-		int numberOfYear = 1;
-		double annualInterestRate = 0.07;
+		
+		// Prompt for years and annual interest rate
+		System.out.print("Loan Amount: ");
+		double loanAmount = input.nextDouble();
+		
+		System.out.print("Number of Years: ");
+		int numberOfYear = input.nextInt();
+		
+		System.out.print("Annual Interest Rate: ");
+		double annualInterestRate = input.nextDouble();
 
 		// Compute monthly interest rate
 		// Monthly interest rate: Annual Interest / 12 / 100
@@ -20,7 +25,7 @@ public class ComputeLoanWithAmortization {
 				(1 - 1/Math.pow(1 + monthlyInterestRate, numberOfYear * 12));
 		double totalPayment = monthlyPayment * numberOfYear * 12;
 
-		System.out.printf("Monthly Payment: %.2f\n", monthlyPayment);
+		System.out.printf("\nMonthly Payment: %.2f\n", monthlyPayment);
 		System.out.printf("Annual Interest Rate: %.2f\n\n", totalPayment);
 
 		double monthlyInterest = 0;
